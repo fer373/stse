@@ -16,6 +16,14 @@ describe('API cart-api', () => {
     expect(res.body).toEqual({ subtotal: 100000, diskon: 10000, total: 90000 });
   });
 
+  test('POST /cart/total menerima voucher MAHASISWA (15%)', async () => {
+    const res = await request(app)
+      .post('/cart/total')
+      .send({ items: [{ nama: 'Buku', harga: 50000, qty: 2 }], voucher: 'MAHASISWA' });
+    expect(res.status).toBe(200);
+    expect(res.body).toEqual({ subtotal: 100000, diskon: 15000, total: 85000 });
+  });
+
   test('POST /cart/total membalas 400 untuk voucher tidak valid', async () => {
     const res = await request(app)
       .post('/cart/total')

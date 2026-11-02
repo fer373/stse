@@ -25,6 +25,10 @@ describe('hitungTotal', () => {
     expect(hitungTotal(items, 'HEMAT10')).toEqual({ subtotal: 100000, diskon: 10000, total: 90000 });
   });
 
+  test('voucher MAHASISWA memberi diskon 15%', () => {
+    expect(hitungTotal(items, 'MAHASISWA')).toEqual({ subtotal: 100000, diskon: 15000, total: 85000 });
+  });
+
   test('kode voucher tidak peka huruf besar/kecil', () => {
     expect(hitungTotal(items, 'diskon25').total).toBe(75000);
   });

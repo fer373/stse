@@ -10,7 +10,7 @@ Special Topic in Software Engineering, Week 8, Kelompok 4.
 | GET    | `/health`     | `{ "status": "ok" }`                         |
 | POST   | `/cart/total` | Menghitung subtotal, diskon voucher, total   |
 
-Voucher: `HEMAT10` (10%), `DISKON25` (25%). Harga dalam Rupiah bilangan bulat.
+Voucher: `HEMAT10` (10%), `DISKON25` (25%), `MAHASISWA` (15%). Harga dalam Rupiah bilangan bulat.
 
 ```bash
 curl -X POST http://38.9.47.13:3000/cart/total \
