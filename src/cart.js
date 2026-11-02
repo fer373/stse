@@ -2,7 +2,7 @@
 const VOUCHERS = {
   HEMAT10: 0.1,
   DISKON25: 0.25,
-  MAHASISWA: 0.15,
+  MAHASISWA: 0.2,
 };
 
 function validasiItem(item) {
