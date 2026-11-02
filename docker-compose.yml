@@ -1,11 +1,13 @@
-name: cart-api
+# Satu VPS dipakai beberapa anggota kelompok: nama project, image, dan port
+# dibedakan agar deploy anggota lain (project cart-api, port 3000) tidak tertimpa.
+name: cart-api-ferdy
 
 services:
   api:
     build: .
-    image: cart-api:latest
+    image: cart-api-ferdy:latest
     ports:
-      - "3000:3000"
+      - "3001:3000"
     restart: unless-stopped
     healthcheck:
       test: ["CMD", "wget", "-qO-", "http://localhost:3000/health"]

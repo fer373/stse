@@ -46,7 +46,7 @@ pipeline {
 
   post {
     success {
-      echo 'Pipeline berhasil: cart-api berjalan di port 3000'
+      echo 'Pipeline berhasil: cart-api berjalan di port 3001'
     }
     failure {
       echo 'Pipeline gagal: cek stage yang berwarna merah'
